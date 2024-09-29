@@ -6,5 +6,4 @@ export default function Notification({totalFeedback}) {
         <p>No feedback yet</p>
       </div>
     );
-  }
 }
