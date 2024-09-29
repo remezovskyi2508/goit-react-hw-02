@@ -50,12 +50,15 @@ function App() {
         totalFeedback={totalFeedback}
         resetFeedback={resetFeedback}
       />
-      <Feedback
-        values={values}
-        totalFeedback={totalFeedback}
-        positiveFeedback={positiveFeedback}
-      />
-      <Notification totalFeedback={totalFeedback} />
+      {totalFeedback > 0 ? (
+        <Feedback
+          values={values}
+          totalFeedback={totalFeedback}
+          positiveFeedback={positiveFeedback}
+        />
+      ) : (
+        <Notification totalFeedback={totalFeedback} />
+      )}
     </div>
   );
 }
