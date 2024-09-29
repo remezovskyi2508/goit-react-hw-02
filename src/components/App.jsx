@@ -38,9 +38,9 @@ function App() {
     });
   };
 
-  //Обрахунок відсоткового значення позитивних відгуків, згідно відео до позитивних вносимо good + neutral...
+  //Обрахунок відсоткового значення позитивних відгуків, виконано згідно умов тз...
   const positiveFeedback =
-    Math.round(((values.good + values.neutral) / totalFeedback) * 100) + '%';
+    Math.round((values.good / totalFeedback) * 100) + '%';
 
   return (
     <div className={styles.wrapper}>
